@@ -1,0 +1,40 @@
+.description-list {
+  display: flex;
+  gap: 30px;
+}
+
+.description-item {
+  display: inline-block;
+  width: 270px;
+  height: 251px;
+}
+
+.description-icons {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.description-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-title {
+  @include font(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  color: var(--first-text-color);
+  margin-bottom: 10px;
+}
+.description-after-title {
+  @include font(null, 14px, 1.7, 0.03em);
+  color: var(--second-text-color);
+  max-width: 270px;
+  max-height: 75px;
+}

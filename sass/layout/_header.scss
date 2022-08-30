@@ -1,0 +1,121 @@
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+  &-container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navigation__list {
+  display: flex;
+  gap: 50px;
+}
+
+.studio {
+  @include font(700, 26px, 1.19, 0.03em);
+  font-family: "Raleway";
+  color: #000000;
+  text-decoration: none;
+  margin-right: 93px;
+}
+.web {
+  @include font(700, 26px, 1.19, 0.03em);
+  font-family: "Raleway";
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.navigation__list .navigation__link {
+  display: block;
+  /* padding-top: 32px;
+  padding-bottom: 32px; */
+}
+
+.navigation__link {
+  @include font(500, 14px, 1.14, 0.02em);
+  text-decoration: none;
+  color: var(--first-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    @include font(500, 14px, 1.14, 0.02em);
+    color: var(--accent-color);
+  }
+}
+
+.current {
+  color: var(--accent-color);
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: -33px;
+    content: "";
+    height: 4px;
+    width: 100%;
+    background: currentColor;
+    border-radius: 2px;
+    display: block;
+    left: 0;
+  }
+}
+
+.icon-envolope {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.icon-tel {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.connect__mail,
+.connect__tel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include font(500, 14px, 1.14, 0.02em);
+  text-decoration: none;
+  color: var(--second-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:hover {
+    @include font(500, 14px, 1.14, 0.02em);
+    text-decoration: none;
+    color: var(--accent-color);
+  }
+
+  &:focus,
+  &:focus {
+    @include font(500, 14px, 1.14, 0.02em);
+    color: var(--accent-color);
+  }
+}
+
+.connect {
+  margin-left: auto;
+  align-items: center;
+  display: flex;
+  gap: 50px;
+}
+
+.connect__list {
+  display: flex;
+  gap: 30px;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: currentColor;
+}
+
+.connect__item {
+  display: flex;
+}

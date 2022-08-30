@@ -1,0 +1,87 @@
+.team {
+  background: #f5f4fa;
+}
+
+.card__list {
+  display: flex;
+  gap: 30px;
+}
+
+.team__title {
+  @include font(700, 36px, 1.16, 0.03em);
+  text-align: center;
+  color: var(--first-text-color);
+  margin-bottom: 50px;
+}
+
+.card__item {
+  min-width: 270px;
+  min-height: 368px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background: #ffffff;
+}
+
+.card__person-job {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.card__person {
+  @include font(500, 16px, 1.18, 0.03em);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card__job-title {
+  @include font(null, 16px, 1.18, 0.03em);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    background-color: var(--accent-color);
+  }
+
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.social__icon {
+  fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  .social__link:hover & {
+    fill: #ffffff;
+  }
+  .social__link:focus & {
+    fill: #ffffff;
+  }
+}
+
+.card__person--color-dark {
+  color: var(--first-text-color);
+}
+
+.card__job-title--color-grey {
+  color: var(--second-text-color);
+}

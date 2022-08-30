@@ -1,0 +1,91 @@
+.hero-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hero-btn {
+  font-family: inherit;
+  @include font(500, 16px, 1.62, 0.03em);
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  color: var(--first-text-color);
+  padding: 6px 22px;
+  transition-property: color, background, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    @include font(500, 16px, 1.62, 0.03em);
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    background: var(--accent-color);
+  }
+}
+
+.descr-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.descr-item {
+  width: calc((100% - 60px) / 3);
+}
+
+.descr-link {
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.descr-item-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.descr-item-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include font(null, 18px, 1.55, 0.03em);
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  .descr-item:hover & {
+    transform: translateY(0%);
+  }
+}
+
+.descr-title-main {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+  border-top: none;
+}
+
+.descr-title {
+  @include font(700, 18px, 2, 0.06em);
+  color: var(--first-text-color);
+}
+
+.descr-after-title {
+  @include font(null, 16px, 1.87, 0.03em);
+  color: var(--second-text-color);
+}
