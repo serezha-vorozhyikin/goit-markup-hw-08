@@ -4,23 +4,36 @@
 
 .card__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .team__title {
-  @include font(700, 36px, 1.16, 0.03em);
+  @include font(700, 28px, 1.18, 0.03em);
   text-align: center;
   color: var(--first-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
 }
 
 .card__item {
+  flex-basis: 100%;
   min-width: 270px;
   min-height: 368px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background: #ffffff;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .card__person-job {
